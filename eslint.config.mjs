@@ -1,6 +1,6 @@
+import { FlatCompat } from "@eslint/eslintrc";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -19,14 +19,14 @@ const eslintConfig = [
 
       // TypeScript 관련 규칙
       "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-expressions": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-empty-object-type": "warn",
-      "@typescript-eslint/no-unused-expressions": "warn",
 
       // react 관련 규칙
+      "react/react-in-jsx-scope": "off",
       "react/no-children-prop": "off",
       "react/no-unknown-property": "off",
-      "react/react-in-jsx-scope": "off",
 
       // 기타 규칙
       "no-useless-escape": "warn",
