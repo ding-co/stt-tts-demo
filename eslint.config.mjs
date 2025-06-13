@@ -17,16 +17,16 @@ const eslintConfig = [
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "error",
 
+      // react 관련 규칙
+      "react/react-in-jsx-scope": "off",
+      "react/no-children-prop": "off",
+      "react/no-unknown-property": "off",
+
       // TypeScript 관련 규칙
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-unused-expressions": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-empty-object-type": "warn",
-
-      // react 관련 규칙
-      "react/react-in-jsx-scope": "off",
-      "react/no-children-prop": "off",
-      "react/no-unknown-property": "off",
 
       // 기타 규칙
       "no-useless-escape": "warn",
