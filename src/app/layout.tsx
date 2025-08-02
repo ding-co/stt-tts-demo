@@ -1,3 +1,4 @@
+import { VoiceProvider } from "@/providers/VoiceProvider";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
@@ -21,7 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={clsx(notoSansKR.className, "antialiased")}>{children}</body>
+      <body className={clsx(notoSansKR.className, "antialiased")}>
+        <VoiceProvider
+          sttConfig={{
+            model: "web-speech",
+            continuous: true,
+            interimResults: true,
+            language: "ko-KR",
+          }}
+          ttsConfig={{ model: "web-speech", language: "ko-KR" }}
+        >
+          {children}
+        </VoiceProvider>
+      </body>
     </html>
   );
 }
